@@ -22,9 +22,18 @@ namespace Program
             calcBtn.TabIndex = 1;
             calcBtn.Text = "Calculate";
             calcBtn.UseVisualStyleBackColor = true;
+            var resetBtn = new Button();
+            resetBtn.Location = new System.Drawing.Point(230, 255);
+            resetBtn.Name = "resetBtn";
+            resetBtn.Size = new System.Drawing.Size(75, 23);
+            resetBtn.TabIndex = 2;
+            resetBtn.Text = "Reset";
+            resetBtn.UseVisualStyleBackColor = true;
+
             this.RRScheduling.CellBorderStyle = TableLayoutPanelCellBorderStyle.Outset;
 
             this.Controls.Add(calcBtn);
+            this.Controls.Add(resetBtn);
 
             // name of the process 
             String[] name = { "p1", "p2", "p3", "p4", "p5", "p6" };

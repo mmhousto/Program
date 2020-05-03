@@ -101,7 +101,7 @@
             this.RRScheduling.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.RRScheduling.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.RRScheduling.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.RRScheduling.Size = new System.Drawing.Size(294, 193);
+            this.RRScheduling.Size = new System.Drawing.Size(299, 193);
             this.RRScheduling.TabIndex = 0;
             // 
             // Process
