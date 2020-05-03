@@ -9,7 +9,7 @@ namespace Program
 
     public class Program
     {
-        public static void roundRobin(String[] p, int[] a,
+        public void roundRobin(String[] p, int[] a,
                                         int[] b, int[] pr, int n)
         {
             // result of average times 
@@ -205,6 +205,7 @@ namespace Program
             //priority for each process
             int[] priority = { 40, 30, 30, 35, 5, 10 };
 
+
             // quantum time of each process 
             int q = 10;
 
@@ -212,7 +213,7 @@ namespace Program
             Button calcButton = new Button();
 
             // cal the function for output 
-            roundRobin(name, arrivaltime, bursttime, priority, q);
+            //roundRobin(name, arrivaltime, bursttime, priority, q);
         }
     }
 }
