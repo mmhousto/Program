@@ -53,7 +53,6 @@ namespace Program
 
                     // these condition for if 
                     // arrival is not on zero 
-
                     // check that if there come before qtime 
                     if (res_a[i] <= t)
                     {
@@ -172,8 +171,8 @@ namespace Program
             Console.WriteLine("Process\tBurst\tPriority  Arrival   Finish   Turnaround   Waiting Time");
             for (int i = 0; i < p.Length; i++)
             {
-                Console.WriteLine(" " + p[i] + "\t\t" + b[i] + "\t\t" + pr[i] + "\t\t" + a[i] + "\t\t" +
-                                    comp[i] + "\t\t" + tat[i] + "\t\t" + w[i]);
+                Console.WriteLine(" " + p[i] + "\t\t" + b[i] + "\t\t" + pr[i] + "\t\t  " + a[i] + "\t\t\t" +
+                                    comp[i] + "\t\t\t" + tat[i] + "\t\t\t" + w[i]);
 
                 res = res + w[i];
                 resc = resc + comp[i];

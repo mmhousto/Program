@@ -15,6 +15,7 @@ namespace Program
         public Form1()
         {
             InitializeComponent();
+            //creates calc and reset button
             var calcBtn = new Button();
             calcBtn.Location = new System.Drawing.Point(230, 270);
             calcBtn.Name = "calcBtn";
@@ -30,6 +31,7 @@ namespace Program
             resetBtn.Text = "Reset";
             resetBtn.UseVisualStyleBackColor = true;
 
+            //puts border on table cells
             this.RRScheduling.CellBorderStyle = TableLayoutPanelCellBorderStyle.Outset;
 
             this.Controls.Add(calcBtn);
@@ -54,6 +56,7 @@ namespace Program
             plusQ.Click += (sender, args) =>
             {
                 q += 1;
+                //sets time quantum to timeQ label
                 timeQ.Text = q.ToString();
             };
 
@@ -63,11 +66,11 @@ namespace Program
                 if (q > 1) {
                     q -= 1;
                 }
+                //sets time quantum to timeQ label
                 timeQ.Text = q.ToString();
             };
 
-            //sets time quantum to timeQ label
-            timeQ.Text = q.ToString();
+            
 
             //connects Program.cs for roundRobin method
             Program RR = new Program();
@@ -80,9 +83,17 @@ namespace Program
 
             };
 
+            //resets round Robin Scheduling and time quantum
+            resetBtn.Click += (sender, args) =>
+            {
+                q = 10;
+                //sets time quantum to timeQ label
+                timeQ.Text = q.ToString();
+            };
 
 
-            
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
