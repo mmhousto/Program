@@ -50,9 +50,30 @@ namespace Program
             // quantum time of each process 
             int q = 10;
 
+            //adds 1 to time quantum
+            plusQ.Click += (sender, args) =>
+            {
+                q += 1;
+                timeQ.Text = q.ToString();
+            };
+
+            //minus' 1 from time quantum
+            minusQ.Click += (sender, args) =>
+            {
+                if (q > 1) {
+                    q -= 1;
+                }
+                timeQ.Text = q.ToString();
+            };
+
+            //sets time quantum to timeQ label
+            timeQ.Text = q.ToString();
+
+            //connects Program.cs for roundRobin method
             Program RR = new Program();
             RR.roundRobin(name, arrivaltime, bursttime, priority, q);
 
+            //calculates round Robin Scheduling
             calcBtn.Click += (sender, args) =>
             {
                 RR.roundRobin(name, arrivaltime, bursttime, priority, q);
@@ -90,6 +111,11 @@ namespace Program
         }
 
         private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click_1(object sender, EventArgs e)
         {
 
         }

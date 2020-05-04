@@ -58,6 +58,10 @@
             this.Priority = new System.Windows.Forms.Label();
             this.Arrival = new System.Windows.Forms.Label();
             this.titleRR = new System.Windows.Forms.Label();
+            this.timeQLbl = new System.Windows.Forms.Label();
+            this.timeQ = new System.Windows.Forms.Label();
+            this.plusQ = new System.Windows.Forms.Button();
+            this.minusQ = new System.Windows.Forms.Button();
             this.RRScheduling.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -420,11 +424,52 @@
             this.titleRR.Text = "Round Robin Scheduling";
             this.titleRR.Click += new System.EventHandler(this.label25_Click);
             // 
+            // timeQLbl
+            // 
+            this.timeQLbl.AutoSize = true;
+            this.timeQLbl.Location = new System.Drawing.Point(49, 69);
+            this.timeQLbl.Name = "timeQLbl";
+            this.timeQLbl.Size = new System.Drawing.Size(82, 13);
+            this.timeQLbl.TabIndex = 6;
+            this.timeQLbl.Text = "Time Quantum: ";
+            this.timeQLbl.Click += new System.EventHandler(this.label25_Click_1);
+            // 
+            // timeQ
+            // 
+            this.timeQ.AutoSize = true;
+            this.timeQ.Location = new System.Drawing.Point(138, 69);
+            this.timeQ.Name = "timeQ";
+            this.timeQ.Size = new System.Drawing.Size(19, 13);
+            this.timeQ.TabIndex = 7;
+            this.timeQ.Text = "10";
+            // 
+            // plusQ
+            // 
+            this.plusQ.Location = new System.Drawing.Point(71, 100);
+            this.plusQ.Name = "plusQ";
+            this.plusQ.Size = new System.Drawing.Size(25, 23);
+            this.plusQ.TabIndex = 8;
+            this.plusQ.Text = "+";
+            this.plusQ.UseVisualStyleBackColor = true;
+            // 
+            // minusQ
+            // 
+            this.minusQ.Location = new System.Drawing.Point(111, 100);
+            this.minusQ.Name = "minusQ";
+            this.minusQ.Size = new System.Drawing.Size(29, 23);
+            this.minusQ.TabIndex = 9;
+            this.minusQ.Text = "-";
+            this.minusQ.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 567);
+            this.Controls.Add(this.minusQ);
+            this.Controls.Add(this.plusQ);
+            this.Controls.Add(this.timeQ);
+            this.Controls.Add(this.timeQLbl);
             this.Controls.Add(this.titleRR);
             this.Controls.Add(this.Arrival);
             this.Controls.Add(this.Priority);
@@ -472,6 +517,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label titleRR;
+        private System.Windows.Forms.Label timeQLbl;
+        private System.Windows.Forms.Label timeQ;
+        private System.Windows.Forms.Button plusQ;
+        private System.Windows.Forms.Button minusQ;
     }
 }
 
