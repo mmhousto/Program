@@ -16,14 +16,14 @@ namespace Program
         {
             InitializeComponent();
             var calcBtn = new Button();
-            calcBtn.Location = new System.Drawing.Point(230, 230);
+            calcBtn.Location = new System.Drawing.Point(230, 270);
             calcBtn.Name = "calcBtn";
             calcBtn.Size = new System.Drawing.Size(75, 23);
             calcBtn.TabIndex = 1;
             calcBtn.Text = "Calculate";
             calcBtn.UseVisualStyleBackColor = true;
             var resetBtn = new Button();
-            resetBtn.Location = new System.Drawing.Point(230, 255);
+            resetBtn.Location = new System.Drawing.Point(230, 300);
             resetBtn.Name = "resetBtn";
             resetBtn.Size = new System.Drawing.Size(75, 23);
             resetBtn.TabIndex = 2;
@@ -85,6 +85,11 @@ namespace Program
         }
 
         private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
         {
 
         }
