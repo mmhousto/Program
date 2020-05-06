@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -9,16 +10,17 @@ namespace Program
 
     public class Program
     {
+        // for sequence storage 
+        String seq = "";
         public void roundRobin(String[] p, int[] a,
                                         int[] b, int[] pr, int n)
         {
+            seq = "";
             // result of average times 
             int res = 0;
             int resc = 0;
             int rest = 0;
-
-            // for sequence storage 
-            String seq = "";
+            
 
             // copy the burst array and arrival array 
             // for not effecting the actual array 
@@ -179,12 +181,17 @@ namespace Program
                 rest = rest + tat[i];
             }
 
+            //set Gannt
+            Gannt = seq;
+
             Console.WriteLine("Average waiting time is " +
                                 (float)res / p.Length);
             Console.WriteLine("Average turnaround time is " +
                                     (float)rest / p.Length);
-            Console.WriteLine("Gannt chart is like: " + seq);
+            Console.WriteLine("Gannt chart is like: " + Gannt);
         }
+
+        public string Gannt { get; set; }
 
         // Driver Code 
         public static void Main(String[] args)

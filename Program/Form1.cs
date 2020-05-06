@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Schema;
 
 namespace Program
 {
@@ -74,13 +75,15 @@ namespace Program
 
             //connects Program.cs for roundRobin method
             Program RR = new Program();
-            RR.roundRobin(name, arrivaltime, bursttime, priority, q);
+            
 
             //calculates round Robin Scheduling
             calcBtn.Click += (sender, args) =>
             {
+                ganntChart.Text = "";
+                RR.Gannt = "";
                 RR.roundRobin(name, arrivaltime, bursttime, priority, q);
-
+                ganntChart.Text = RR.Gannt;
             };
 
             //resets round Robin Scheduling and time quantum
@@ -88,7 +91,9 @@ namespace Program
             {
                 q = 10;
                 //sets time quantum to timeQ label
+                RR.Gannt = "";
                 timeQ.Text = q.ToString();
+                ganntChart.Text = "";
             };
 
 

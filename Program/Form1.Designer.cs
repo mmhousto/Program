@@ -62,6 +62,8 @@
             this.timeQ = new System.Windows.Forms.Label();
             this.plusQ = new System.Windows.Forms.Button();
             this.minusQ = new System.Windows.Forms.Button();
+            this.ganntLbl = new System.Windows.Forms.Label();
+            this.ganntChart = new System.Windows.Forms.Label();
             this.RRScheduling.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -461,11 +463,32 @@
             this.minusQ.Text = "-";
             this.minusQ.UseVisualStyleBackColor = true;
             // 
+            // ganntLbl
+            // 
+            this.ganntLbl.AutoSize = true;
+            this.ganntLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ganntLbl.Location = new System.Drawing.Point(12, 349);
+            this.ganntLbl.Name = "ganntLbl";
+            this.ganntLbl.Size = new System.Drawing.Size(105, 20);
+            this.ganntLbl.TabIndex = 10;
+            this.ganntLbl.Text = "Gannt Chart: ";
+            // 
+            // ganntChart
+            // 
+            this.ganntChart.AutoSize = true;
+            this.ganntChart.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ganntChart.Location = new System.Drawing.Point(117, 349);
+            this.ganntChart.Name = "ganntChart";
+            this.ganntChart.Size = new System.Drawing.Size(0, 15);
+            this.ganntChart.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 567);
+            this.Controls.Add(this.ganntChart);
+            this.Controls.Add(this.ganntLbl);
             this.Controls.Add(this.minusQ);
             this.Controls.Add(this.plusQ);
             this.Controls.Add(this.timeQ);
@@ -521,6 +544,8 @@
         private System.Windows.Forms.Label timeQ;
         private System.Windows.Forms.Button plusQ;
         private System.Windows.Forms.Button minusQ;
+        private System.Windows.Forms.Label ganntLbl;
+        private System.Windows.Forms.Label ganntChart;
     }
 }
 
