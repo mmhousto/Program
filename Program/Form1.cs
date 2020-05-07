@@ -16,7 +16,7 @@ namespace Program
         public Form1()
         {
             InitializeComponent();
-            //creates calc and reset button
+            //creates calc and reset button for RR
             var calcBtn = new Button();
             calcBtn.Location = new System.Drawing.Point(230, 270);
             calcBtn.Name = "calcBtn";
@@ -34,6 +34,7 @@ namespace Program
 
             //puts border on table cells
             this.RRScheduling.CellBorderStyle = TableLayoutPanelCellBorderStyle.Outset;
+            this.MLQScheduling.CellBorderStyle = TableLayoutPanelCellBorderStyle.Outset;
 
             this.Controls.Add(calcBtn);
             this.Controls.Add(resetBtn);
@@ -71,7 +72,49 @@ namespace Program
                 timeQ.Text = q.ToString();
             };
 
-            
+            // quantum time1 of each process 
+            int q1 = 3;
+
+            //adds 1 to time quantum1
+            plusQ1.Click += (sender, args) =>
+            {
+                q1 += 1;
+                //sets time quantum1 to timeQ1 label
+                timeQ1.Text = q1.ToString();
+            };
+
+            //minus' 1 from time quantum1
+            minusQ1.Click += (sender, args) =>
+            {
+                if (q1 > 1)
+                {
+                    q1 -= 1;
+                }
+                //sets time quantum1 to timeQ1 label
+                timeQ1.Text = q1.ToString();
+            };
+
+            // quantum time1 of each process 
+            int q2 = 4;
+
+            //adds 1 to time quantum1
+            plusQ2.Click += (sender, args) =>
+            {
+                q2 += 1;
+                //sets time quantum1 to timeQ1 label
+                timeQ2.Text = q2.ToString();
+            };
+
+            //minus' 1 from time quantum1
+            minusQ2.Click += (sender, args) =>
+            {
+                if (q2 > 1)
+                {
+                    q2 -= 1;
+                }
+                //sets time quantum1 to timeQ1 label
+                timeQ2.Text = q2.ToString();
+            };
 
             //connects Program.cs for roundRobin method
             Program RR = new Program();
@@ -142,6 +185,11 @@ namespace Program
         }
 
         private void label25_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label49_Click(object sender, EventArgs e)
         {
 
         }

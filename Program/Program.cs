@@ -151,7 +151,7 @@ namespace Program
                         // Check if "pIdle" was the last sequence string update
                         if (idlePermit)
                         {
-                            seq += "-> pIdle ";
+                            seq += "->pIdle ";
                         }
                         idlePermit = false;
                         idleCheck = 0;

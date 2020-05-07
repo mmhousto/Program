@@ -68,7 +68,50 @@
             this.awtLbl = new System.Windows.Forms.Label();
             this.ATaT = new System.Windows.Forms.Label();
             this.AWT = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.minusQ1 = new System.Windows.Forms.Button();
+            this.plusQ1 = new System.Windows.Forms.Button();
+            this.timeQ1 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.MLQScheduling = new System.Windows.Forms.TableLayoutPanel();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.minusQ2 = new System.Windows.Forms.Button();
+            this.plusQ2 = new System.Windows.Forms.Button();
+            this.timeQ2 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.calcMLQ = new System.Windows.Forms.Button();
+            this.resetMLQ = new System.Windows.Forms.Button();
             this.RRScheduling.SuspendLayout();
+            this.MLQScheduling.SuspendLayout();
             this.SuspendLayout();
             // 
             // RRScheduling
@@ -526,11 +569,487 @@
             this.AWT.TabIndex = 15;
             this.AWT.Text = "0";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(157, 882);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(18, 20);
+            this.label25.TabIndex = 31;
+            this.label25.Text = "0";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(183, 847);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(18, 20);
+            this.label26.TabIndex = 30;
+            this.label26.Text = "0";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(12, 882);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(139, 20);
+            this.label27.TabIndex = 29;
+            this.label27.Text = "Avg Waiting Time: ";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(12, 847);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(168, 20);
+            this.label28.TabIndex = 28;
+            this.label28.Text = "Avg Turnaround Time: ";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(117, 812);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(0, 15);
+            this.label29.TabIndex = 27;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(12, 812);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(105, 20);
+            this.label30.TabIndex = 26;
+            this.label30.Text = "Gannt Chart: ";
+            // 
+            // minusQ1
+            // 
+            this.minusQ1.Location = new System.Drawing.Point(111, 563);
+            this.minusQ1.Name = "minusQ1";
+            this.minusQ1.Size = new System.Drawing.Size(29, 23);
+            this.minusQ1.TabIndex = 25;
+            this.minusQ1.Text = "-";
+            this.minusQ1.UseVisualStyleBackColor = true;
+            // 
+            // plusQ1
+            // 
+            this.plusQ1.Location = new System.Drawing.Point(71, 563);
+            this.plusQ1.Name = "plusQ1";
+            this.plusQ1.Size = new System.Drawing.Size(25, 23);
+            this.plusQ1.TabIndex = 24;
+            this.plusQ1.Text = "+";
+            this.plusQ1.UseVisualStyleBackColor = true;
+            // 
+            // timeQ1
+            // 
+            this.timeQ1.AutoSize = true;
+            this.timeQ1.Location = new System.Drawing.Point(138, 532);
+            this.timeQ1.Name = "timeQ1";
+            this.timeQ1.Size = new System.Drawing.Size(13, 13);
+            this.timeQ1.TabIndex = 23;
+            this.timeQ1.Text = "3";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(49, 532);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(88, 13);
+            this.label32.TabIndex = 22;
+            this.label32.Text = "Time Quantum1: ";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(316, 484);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(142, 13);
+            this.label33.TabIndex = 21;
+            this.label33.Text = "Multilevel Queue Scheduling";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(457, 508);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(73, 13);
+            this.label34.TabIndex = 20;
+            this.label34.Text = "Priority Queue";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(380, 508);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(62, 13);
+            this.label35.TabIndex = 19;
+            this.label35.Text = "Arrival Time";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(316, 508);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(57, 13);
+            this.label36.TabIndex = 18;
+            this.label36.Text = "Burst Time";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(245, 508);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(45, 13);
+            this.label37.TabIndex = 17;
+            this.label37.Text = "Process";
+            // 
+            // MLQScheduling
+            // 
+            this.MLQScheduling.BackColor = System.Drawing.SystemColors.Control;
+            this.MLQScheduling.ColumnCount = 4;
+            this.MLQScheduling.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.MLQScheduling.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.MLQScheduling.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.MLQScheduling.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.MLQScheduling.Controls.Add(this.label41, 3, 4);
+            this.MLQScheduling.Controls.Add(this.label42, 2, 4);
+            this.MLQScheduling.Controls.Add(this.label43, 1, 4);
+            this.MLQScheduling.Controls.Add(this.label44, 3, 3);
+            this.MLQScheduling.Controls.Add(this.label45, 2, 3);
+            this.MLQScheduling.Controls.Add(this.label46, 1, 3);
+            this.MLQScheduling.Controls.Add(this.label47, 3, 2);
+            this.MLQScheduling.Controls.Add(this.label48, 2, 2);
+            this.MLQScheduling.Controls.Add(this.label49, 1, 2);
+            this.MLQScheduling.Controls.Add(this.label50, 3, 1);
+            this.MLQScheduling.Controls.Add(this.label51, 2, 1);
+            this.MLQScheduling.Controls.Add(this.label52, 1, 1);
+            this.MLQScheduling.Controls.Add(this.label53, 3, 0);
+            this.MLQScheduling.Controls.Add(this.label54, 2, 0);
+            this.MLQScheduling.Controls.Add(this.label55, 1, 0);
+            this.MLQScheduling.Controls.Add(this.label56, 0, 0);
+            this.MLQScheduling.Controls.Add(this.label57, 0, 1);
+            this.MLQScheduling.Controls.Add(this.label58, 0, 2);
+            this.MLQScheduling.Controls.Add(this.label59, 0, 3);
+            this.MLQScheduling.Controls.Add(this.label60, 0, 4);
+            this.MLQScheduling.Location = new System.Drawing.Point(231, 524);
+            this.MLQScheduling.Name = "MLQScheduling";
+            this.MLQScheduling.RowCount = 5;
+            this.MLQScheduling.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.MLQScheduling.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.MLQScheduling.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.MLQScheduling.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.MLQScheduling.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.MLQScheduling.Size = new System.Drawing.Size(299, 163);
+            this.MLQScheduling.TabIndex = 16;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(251, 129);
+            this.label41.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(13, 13);
+            this.label41.TabIndex = 20;
+            this.label41.Text = "2";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(176, 129);
+            this.label42.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(19, 13);
+            this.label42.TabIndex = 19;
+            this.label42.Text = "18";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(101, 129);
+            this.label43.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(19, 13);
+            this.label43.TabIndex = 18;
+            this.label43.Text = "10";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(251, 99);
+            this.label44.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(13, 13);
+            this.label44.TabIndex = 17;
+            this.label44.Text = "2";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(176, 99);
+            this.label45.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(19, 13);
+            this.label45.TabIndex = 16;
+            this.label45.Text = "12";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(101, 99);
+            this.label46.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(13, 13);
+            this.label46.TabIndex = 15;
+            this.label46.Text = "5";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(251, 69);
+            this.label47.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(13, 13);
+            this.label47.TabIndex = 14;
+            this.label47.Text = "1";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(176, 69);
+            this.label48.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(13, 13);
+            this.label48.TabIndex = 13;
+            this.label48.Text = "5";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(101, 69);
+            this.label49.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(13, 13);
+            this.label49.TabIndex = 12;
+            this.label49.Text = "6";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label49.Click += new System.EventHandler(this.label49_Click);
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(251, 39);
+            this.label50.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(13, 13);
+            this.label50.TabIndex = 11;
+            this.label50.Text = "2";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(176, 39);
+            this.label51.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(13, 13);
+            this.label51.TabIndex = 10;
+            this.label51.Text = "4";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(101, 39);
+            this.label52.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(13, 13);
+            this.label52.TabIndex = 9;
+            this.label52.Text = "8";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(251, 9);
+            this.label53.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(13, 13);
+            this.label53.TabIndex = 8;
+            this.label53.Text = "1";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(176, 9);
+            this.label54.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(13, 13);
+            this.label54.TabIndex = 7;
+            this.label54.Text = "0";
+            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(101, 9);
+            this.label55.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(19, 13);
+            this.label55.TabIndex = 6;
+            this.label55.Text = "12";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(26, 9);
+            this.label56.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(19, 13);
+            this.label56.TabIndex = 0;
+            this.label56.Text = "p1";
+            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(26, 39);
+            this.label57.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(19, 13);
+            this.label57.TabIndex = 1;
+            this.label57.Text = "p2";
+            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(26, 69);
+            this.label58.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(19, 13);
+            this.label58.TabIndex = 2;
+            this.label58.Text = "p3";
+            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(26, 99);
+            this.label59.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(19, 13);
+            this.label59.TabIndex = 3;
+            this.label59.Text = "p4";
+            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(26, 129);
+            this.label60.Margin = new System.Windows.Forms.Padding(26, 9, 3, 0);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(19, 13);
+            this.label60.TabIndex = 4;
+            this.label60.Text = "p5";
+            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // minusQ2
+            // 
+            this.minusQ2.Location = new System.Drawing.Point(111, 654);
+            this.minusQ2.Name = "minusQ2";
+            this.minusQ2.Size = new System.Drawing.Size(29, 23);
+            this.minusQ2.TabIndex = 35;
+            this.minusQ2.Text = "-";
+            this.minusQ2.UseVisualStyleBackColor = true;
+            // 
+            // plusQ2
+            // 
+            this.plusQ2.Location = new System.Drawing.Point(71, 654);
+            this.plusQ2.Name = "plusQ2";
+            this.plusQ2.Size = new System.Drawing.Size(25, 23);
+            this.plusQ2.TabIndex = 34;
+            this.plusQ2.Text = "+";
+            this.plusQ2.UseVisualStyleBackColor = true;
+            // 
+            // timeQ2
+            // 
+            this.timeQ2.AutoSize = true;
+            this.timeQ2.Location = new System.Drawing.Point(138, 623);
+            this.timeQ2.Name = "timeQ2";
+            this.timeQ2.Size = new System.Drawing.Size(13, 13);
+            this.timeQ2.TabIndex = 33;
+            this.timeQ2.Text = "4";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(49, 623);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(88, 13);
+            this.label39.TabIndex = 32;
+            this.label39.Text = "Time Quantum2: ";
+            // 
+            // calcMLQ
+            // 
+            this.calcMLQ.Location = new System.Drawing.Point(345, 704);
+            this.calcMLQ.Name = "calcMLQ";
+            this.calcMLQ.Size = new System.Drawing.Size(75, 23);
+            this.calcMLQ.TabIndex = 36;
+            this.calcMLQ.Text = "Calculate";
+            this.calcMLQ.UseVisualStyleBackColor = true;
+            // 
+            // resetMLQ
+            // 
+            this.resetMLQ.Location = new System.Drawing.Point(345, 733);
+            this.resetMLQ.Name = "resetMLQ";
+            this.resetMLQ.Size = new System.Drawing.Size(75, 23);
+            this.resetMLQ.TabIndex = 37;
+            this.resetMLQ.Text = "Reset";
+            this.resetMLQ.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 567);
+            this.ClientSize = new System.Drawing.Size(800, 926);
+            this.Controls.Add(this.resetMLQ);
+            this.Controls.Add(this.calcMLQ);
+            this.Controls.Add(this.minusQ2);
+            this.Controls.Add(this.plusQ2);
+            this.Controls.Add(this.timeQ2);
+            this.Controls.Add(this.label39);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.minusQ1);
+            this.Controls.Add(this.plusQ1);
+            this.Controls.Add(this.timeQ1);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label37);
+            this.Controls.Add(this.MLQScheduling);
             this.Controls.Add(this.AWT);
             this.Controls.Add(this.ATaT);
             this.Controls.Add(this.awtLbl);
@@ -551,6 +1070,8 @@
             this.Text = "Form1";
             this.RRScheduling.ResumeLayout(false);
             this.RRScheduling.PerformLayout();
+            this.MLQScheduling.ResumeLayout(false);
+            this.MLQScheduling.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -598,6 +1119,48 @@
         private System.Windows.Forms.Label awtLbl;
         private System.Windows.Forms.Label ATaT;
         private System.Windows.Forms.Label AWT;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button minusQ1;
+        private System.Windows.Forms.Button plusQ1;
+        private System.Windows.Forms.Label timeQ1;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TableLayoutPanel MLQScheduling;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Button minusQ2;
+        private System.Windows.Forms.Button plusQ2;
+        private System.Windows.Forms.Label timeQ2;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Button calcMLQ;
+        private System.Windows.Forms.Button resetMLQ;
     }
 }
 
