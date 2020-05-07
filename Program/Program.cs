@@ -186,13 +186,13 @@ namespace Program
 
             //set Gannt, TaT, wait
             Gannt = seq;
-            TaT = rest / process.Length;
-            WaitT = res / process.Length;
+            TaT = (float)rest / process.Length;
+            WaitT = (float)res / process.Length;
 
             Console.WriteLine("Average waiting time is " +
-                                (float)res / process.Length);
+                                WaitT);
             Console.WriteLine("Average turnaround time is " +
-                                    (float)rest / process.Length);
+                                    TaT);
             Console.WriteLine("Gannt chart is like: " + Gannt);
         }
 
