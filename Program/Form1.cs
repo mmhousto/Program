@@ -38,6 +38,7 @@ namespace Program
             this.Controls.Add(calcBtn);
             this.Controls.Add(resetBtn);
 
+            // Round Robin variables
             // name of the process 
             String[] name = { "p1", "p2", "p3", "p4", "p5", "p6" };
 
@@ -71,8 +72,8 @@ namespace Program
                 timeQ.Text = q.ToString();
             };
 
-            
 
+            /*
             //connects Program.cs for roundRobin method
             Program RR = new Program();
             
@@ -95,7 +96,45 @@ namespace Program
                 timeQ.Text = q.ToString();
                 ganntChart.Text = "";
             };
+            */
 
+
+            // This is temporary stuff to help test multilevel queue code:
+            // name of the process 
+            String[] _name = { "p1", "p2", "p3", "p4", "p5" };
+
+            // arrival for every process 
+            int[] _arrivaltime = { 0, 4, 5, 12, 18 };
+
+            // burst time for every process 
+            int[] _bursttime = { 12, 8, 6, 5, 10 };
+
+            //priority for each process
+            int[] _priority = { 1, 2, 1, 2, 2 };
+
+            // quantum time of each process 
+            int q1 = 3;
+            int q2 = 4;
+
+            // Multilevel Queue
+            Program MLQ = new Program();
+            calcBtn.Click += (sender, args) =>
+            {
+                ganntChart.Text = "";
+                MLQ.Gannt = "";
+                MLQ.multiLevel(_name, _arrivaltime, _bursttime, _priority, q1, q2);
+                ganntChart.Text = MLQ.Gannt;
+            };
+
+            // Reset
+            resetBtn.Click += (sender, args) =>
+            {
+                //q = 10;
+                //sets time quantum to timeQ label
+                MLQ.Gannt = "";
+                timeQ.Text = q.ToString();
+                ganntChart.Text = "";
+            };
 
 
 

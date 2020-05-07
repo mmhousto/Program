@@ -49,7 +49,7 @@ namespace Program
             Array.Reverse(priorityOrder);
             for (int i = 0; i < process.Length; i++)
             {
-                for(int j = 0; j < process.Length; j++)
+                for (int j = 0; j < process.Length; j++)
                 {
                     if (priorityOrder[i] == priorityComp[j])
                     {
@@ -164,13 +164,13 @@ namespace Program
                     }
                 }
 
-                
+
                 // for exiting the while loop 
                 if (leave)
                 {
                     break;
                 }
-                
+
             }
 
             Console.WriteLine("Process\tBurst\tPriority  Arrival   Finish   Turnaround   Waiting Time");
@@ -193,6 +193,170 @@ namespace Program
                                     (float)rest / process.Length);
             Console.WriteLine("Gannt chart is like: " + Gannt);
         }
+
+
+
+        public void multiLevel(String[] process, int[] arrival,
+                                        int[] burst, int[] priority, int q1, int q2)
+        {
+            seq = "";
+
+            // Variables
+            int time = 0;
+            int length = process.Length;
+
+            // Quantums for queue 1 & 2
+            int quantum1 = q1;
+            int quantum2 = q2;
+
+            // Lists to hold time data
+            int[] turnAroundTime = new int[length];
+            int[] waitTime = new int[length];
+            int[] completionTime = new int[length];
+            
+            // Need a copy of original burst values to calculate wait time
+            int[] burstCopy = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                burstCopy[i] = burst[i];
+            }
+
+            // Count number of HP processes
+            int hpCount = 0;
+            for (int i = 0; i < length; i++)
+            {
+                if (priority[i] == 1)
+                {
+                    hpCount++;
+                }
+            }
+
+            // Keep track of completed processes
+            int completionCounter = 0;
+            int mostRecentHighPriority = 0;
+
+            // Set to true when finished to exit while loop
+            Boolean leave = false;
+            Boolean firstQueueDone = false;
+
+            // Begin while loop
+            while (!leave)
+            {
+                // Begin Multilevel Queue Scheduling
+                for (int i = 0; i < length; i++)
+                {
+                    // Check if process has arrived
+                    if (arrival[i] <= time)
+                    {
+                        // High priority
+                        if ((priority[i] == 1) && (burst[i] > 0))
+                        {
+                            if (burst[i] > quantum1)
+                            {
+                                time = time + quantum1;
+                                burst[i] = burst[i] - quantum1;
+                                mostRecentHighPriority = i;
+                                seq += "-> " + process[i] + " ";
+                            }
+                            else
+                            {
+                                // Increase time
+                                time = time + burst[i];
+
+                                // Completion time 
+                                completionTime[i] = time;
+
+                                // Turn around time
+                                turnAroundTime[i] = time - arrival[i];
+
+                                // Wait time 
+                                waitTime[i] = turnAroundTime[i] - burstCopy[i];
+                                burst[i] = 0;
+
+                                // Update sequence
+                                seq += "->" + process[i] + " ";
+
+                                // Update number of completed processes
+                                completionCounter++;
+                                if (completionCounter == hpCount)
+                                {
+                                    firstQueueDone = true;
+                                }
+                            }
+                        }
+                        // Current process is low priority
+                        else if (firstQueueDone)
+                        {
+                            if ((priority[i] == 2) && (burst[i] > 0))
+                            {
+                                if (burst[i] > quantum2)
+                                {
+                                    time = time + quantum2;
+                                    burst[i] = burst[i] - quantum2;
+                                    seq += "-> " + process[i] + " ";
+                                }
+                                else
+                                {
+                                    // Increase time
+                                    time = time + burst[i];
+
+                                    // Completion time 
+                                    completionTime[i] = time;
+
+                                    // Turn around time
+                                    turnAroundTime[i] = time - arrival[i];
+
+                                    // Wait time 
+                                    waitTime[i] = turnAroundTime[i] - burstCopy[i];
+                                    burst[i] = 0;
+
+                                    // Update sequence
+                                    seq += "->" + process[i] + " ";
+
+                                    // Update number of completed processes
+                                    completionCounter++;
+                                }
+                            }
+                        }
+                    }
+                    // Check if all process have been completed
+                    if (completionCounter >= length)
+                    {
+                        leave = true;
+                    }
+                }
+
+                // Exit the while loop
+                if (leave)
+                {
+                    break;
+                }
+            }
+            // End while loop
+
+            // Set Gantt
+            Gannt = seq;
+
+            // Calculate average TAT
+            int sumT = 0;
+            int avgTAT = 0;
+            for(int i = 0; i < length; i++)
+            {
+                sumT += turnAroundTime[i];
+            }
+            avgTAT = sumT / length;
+
+
+            // Calculate average wait time
+            int sumW = 0;
+            int avgWait = 0;
+            for (int i = 0; i < length; i++)
+            {
+                sumW += waitTime[i];
+            }
+            avgWait = sumW / length;
+        }
+
 
         public string Gannt { get; set; }
 
