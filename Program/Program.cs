@@ -54,7 +54,6 @@ namespace Program
                     if (priorityOrder[i] == priorityComp[j])
                     {
                         priorityOrder[i] = j;
-                        //seq += priorityOrder[i] + " ";
                         // *Assuming we dont accept negative priority values
                         // Makes sure the value isnt checked again
                         priorityComp[j] = -1;
@@ -62,7 +61,6 @@ namespace Program
                     }
                 }
             }
-            
 
 
             // critical time of system 
@@ -164,121 +162,6 @@ namespace Program
                     {
                         leave = true;
                     }
-
-
-
-
-
-                    /*
-                    // these condition for if 
-                    // arrival is not on zero 
-                    // check that if there come before qtime 
-                    if (res_arrival[i] <= t)
-                    {
-                        if (res_arrival[i] <= quantum)
-                        {
-                            if (res_burst[i] > 0)
-                            {
-                                flag = false;
-                                if (res_burst[i] > quantum)
-                                {
-
-                                    // decrease the burst time 
-                                    t = t + quantum;
-                                    res_burst[i] = res_burst[i] - quantum;
-                                    res_arrival[i] = res_arrival[i] + quantum;
-                                    seq += "->" + process[i];
-                                }
-                                else
-                                {
-
-                                    // for last time 
-                                    t = t + res_burst[i];
-
-                                    // store comp time 
-                                    comp[i] = t;
-
-                                    //turn around time
-                                    tat[i] = t - arrival[i];
-
-                                    // store wait time 
-                                    w[i] = tat[i] - burst[i];
-                                    res_burst[i] = 0;
-
-                                    // add sequence 
-                                    seq += "->" + process[i];
-                                }
-                            }
-                        }
-                        else if (res_arrival[i] > quantum)
-                        {
-
-                            // is any have less arrival time 
-                            // the coming process then execute them 
-                            for (int j = 0; j < process.Length; j++)
-                            {
-
-                                // compare 
-                                if (res_arrival[j] < res_arrival[i])
-                                {
-                                    if (res_burst[j] > 0)
-                                    {
-                                        flag = false;
-                                        if (res_burst[j] > quantum)
-                                        {
-                                            t = t + quantum;
-                                            res_burst[j] = res_burst[j] - quantum;
-                                            res_arrival[j] = res_arrival[j] + quantum;
-                                            seq += "->" + process[j];
-                                        }
-                                        else
-                                        {
-                                            t = t + res_burst[j];
-                                            comp[j] = t;
-                                            tat[j] = t - arrival[j];
-                                            w[j] = tat[j] - burst[j];
-                                            res_burst[j] = 0;
-                                            seq += "->" + process[j];
-                                        }
-                                    }
-                                }
-                            }
-
-                            // now the previous process according to 
-                            // ith is process 
-                            if (res_burst[i] > 0)
-                            {
-                                flag = false;
-
-                                // Check for greaters 
-                                if (res_burst[i] > quantum)
-                                {
-                                    t = t + quantum;
-                                    res_burst[i] = res_burst[i] - quantum;
-                                    res_arrival[i] = res_arrival[i] + quantum;
-                                    seq += "->" + process[i];
-                                }
-                                else
-                                {
-                                    t = t + res_burst[i];
-                                    comp[i] = t;
-                                    tat[i] = t - arrival[i];
-                                    w[i] = tat[i] - burst[i];
-                                    res_burst[i] = 0;
-                                    seq += "->" + process[i];
-                                }
-                            }
-                        }
-                    }
-
-                    // if no process is come on thse critical 
-                    else if (res_arrival[i] > t)
-                    {
-                        t += quantum;
-                        i--;
-                        seq += "->pIdle";
-                    }
-                    */
                 }
 
                 
