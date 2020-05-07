@@ -64,6 +64,10 @@
             this.minusQ = new System.Windows.Forms.Button();
             this.ganntLbl = new System.Windows.Forms.Label();
             this.ganntChart = new System.Windows.Forms.Label();
+            this.tatLbl = new System.Windows.Forms.Label();
+            this.awtLbl = new System.Windows.Forms.Label();
+            this.ATaT = new System.Windows.Forms.Label();
+            this.AWT = new System.Windows.Forms.Label();
             this.RRScheduling.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -482,11 +486,55 @@
             this.ganntChart.Size = new System.Drawing.Size(0, 15);
             this.ganntChart.TabIndex = 11;
             // 
+            // tatLbl
+            // 
+            this.tatLbl.AutoSize = true;
+            this.tatLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tatLbl.Location = new System.Drawing.Point(12, 384);
+            this.tatLbl.Name = "tatLbl";
+            this.tatLbl.Size = new System.Drawing.Size(168, 20);
+            this.tatLbl.TabIndex = 12;
+            this.tatLbl.Text = "Avg Turnaround Time: ";
+            // 
+            // awtLbl
+            // 
+            this.awtLbl.AutoSize = true;
+            this.awtLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.awtLbl.Location = new System.Drawing.Point(12, 419);
+            this.awtLbl.Name = "awtLbl";
+            this.awtLbl.Size = new System.Drawing.Size(139, 20);
+            this.awtLbl.TabIndex = 13;
+            this.awtLbl.Text = "Avg Waiting Time: ";
+            // 
+            // ATaT
+            // 
+            this.ATaT.AutoSize = true;
+            this.ATaT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ATaT.Location = new System.Drawing.Point(183, 384);
+            this.ATaT.Name = "ATaT";
+            this.ATaT.Size = new System.Drawing.Size(18, 20);
+            this.ATaT.TabIndex = 14;
+            this.ATaT.Text = "0";
+            // 
+            // AWT
+            // 
+            this.AWT.AutoSize = true;
+            this.AWT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AWT.Location = new System.Drawing.Point(157, 419);
+            this.AWT.Name = "AWT";
+            this.AWT.Size = new System.Drawing.Size(18, 20);
+            this.AWT.TabIndex = 15;
+            this.AWT.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 567);
+            this.Controls.Add(this.AWT);
+            this.Controls.Add(this.ATaT);
+            this.Controls.Add(this.awtLbl);
+            this.Controls.Add(this.tatLbl);
             this.Controls.Add(this.ganntChart);
             this.Controls.Add(this.ganntLbl);
             this.Controls.Add(this.minusQ);
@@ -546,6 +594,10 @@
         private System.Windows.Forms.Button minusQ;
         private System.Windows.Forms.Label ganntLbl;
         private System.Windows.Forms.Label ganntChart;
+        private System.Windows.Forms.Label tatLbl;
+        private System.Windows.Forms.Label awtLbl;
+        private System.Windows.Forms.Label ATaT;
+        private System.Windows.Forms.Label AWT;
     }
 }
 
