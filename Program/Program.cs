@@ -215,7 +215,7 @@ namespace Program
             int[] turnAroundTime = new int[length];
             int[] waitTime = new int[length];
             int[] completionTime = new int[length];
-            
+
             // Need a copy of original burst values to calculate wait time
             int[] burstCopy = new int[length];
             for (int i = 0; i < length; i++)
@@ -342,7 +342,7 @@ namespace Program
             // Calculate average TAT
             int sumT = 0;
             int avgTAT = 0;
-            for(int i = 0; i < length; i++)
+            for (int i = 0; i < length; i++)
             {
                 sumT += turnAroundTime[i];
             }
@@ -360,7 +360,9 @@ namespace Program
         }
 
 
+
         //getters and setters for gannt, tat, wait
+
         public string Gannt { get; set; }
         public float TaT { get; set; }
         public float WaitT { get; set; }

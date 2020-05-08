@@ -73,7 +73,7 @@ namespace Program
             };
 
 
-            /*
+            
             //connects Program.cs for roundRobin method
             Program RR = new Program();
             
@@ -106,9 +106,9 @@ namespace Program
                 timeQ.Text = q.ToString();
                 ganntChart.Text = "";
             };
-            */
+            
 
-
+            /*
             // This is temporary stuff to help test multilevel queue code:
             // name of the process 
             String[] _name = { "p1", "p2", "p3", "p4", "p5" };
@@ -145,7 +145,7 @@ namespace Program
                 timeQ.Text = q.ToString();
                 ganntChart.Text = "";
             };
-
+            */
 
 
         }
