@@ -184,13 +184,15 @@ namespace Program
                 rest = rest + tat[i];
             }
 
-            // set Gannt
+            //set Gannt, TaT, wait
             Gannt = seq;
+            TaT = (float)rest / process.Length;
+            WaitT = (float)res / process.Length;
 
             Console.WriteLine("Average waiting time is " +
-                                (float)res / process.Length);
+                                WaitT);
             Console.WriteLine("Average turnaround time is " +
-                                    (float)rest / process.Length);
+                                    TaT);
             Console.WriteLine("Gannt chart is like: " + Gannt);
         }
 
@@ -358,7 +360,10 @@ namespace Program
         }
 
 
+        //getters and setters for gannt, tat, wait
         public string Gannt { get; set; }
+        public float TaT { get; set; }
+        public float WaitT { get; set; }
 
         // Driver Code 
         public static void Main(String[] args)

@@ -82,9 +82,15 @@ namespace Program
             calcBtn.Click += (sender, args) =>
             {
                 ganntChart.Text = "";
+                ATaT.Text = "0";
+                AWT.Text = "0";
                 RR.Gannt = "";
+                RR.TaT = 0;
+                RR.WaitT = 0;
                 RR.roundRobin(name, arrivaltime, bursttime, priority, q);
                 ganntChart.Text = RR.Gannt;
+                ATaT.Text = RR.TaT.ToString();
+                AWT.Text = RR.WaitT.ToString();
             };
 
             //resets round Robin Scheduling and time quantum
@@ -92,7 +98,11 @@ namespace Program
             {
                 q = 10;
                 //sets time quantum to timeQ label
+                ATaT.Text = "0";
+                AWT.Text = "0";
                 RR.Gannt = "";
+                RR.TaT = 0;
+                RR.WaitT = 0;
                 timeQ.Text = q.ToString();
                 ganntChart.Text = "";
             };
