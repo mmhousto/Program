@@ -341,22 +341,20 @@ namespace Program
 
             // Calculate average TAT
             int sumT = 0;
-            int avgTAT = 0;
             for (int i = 0; i < length; i++)
             {
                 sumT += turnAroundTime[i];
             }
-            avgTAT = sumT / length;
+            QTat = (float)sumT / length;
 
 
             // Calculate average wait time
             int sumW = 0;
-            int avgWait = 0;
             for (int i = 0; i < length; i++)
             {
                 sumW += waitTime[i];
             }
-            avgWait = sumW / length;
+            QWait = (float)sumW / length;
         }
 
 
@@ -366,6 +364,9 @@ namespace Program
         public string Gannt { get; set; }
         public float TaT { get; set; }
         public float WaitT { get; set; }
+        public float QTat { get; set; }
+        public float QWait { get; set; }
+
 
         // Driver Code 
         public static void Main(String[] args)
@@ -374,7 +375,7 @@ namespace Program
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            // name of the process 
+            /* name of the process 
             String[] name = { "p1", "p2", "p3", "p4", "p5", "p6" };
 
             // arrival for every process 
@@ -395,6 +396,7 @@ namespace Program
 
             // cal the function for output 
             //roundRobin(name, arrivaltime, bursttime, priority, q);
+            */
         }
     }
 }

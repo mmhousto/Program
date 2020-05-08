@@ -109,8 +109,8 @@ namespace Program
             };
             
 
-            /*
-            //========== This is temporary stuff to help test multilevel queue code ===========//
+            
+            //========== multilevel queue ===========//
 
             // name of the process 
             String[] _name = { "p1", "p2", "p3", "p4", "p5" };
@@ -128,26 +128,71 @@ namespace Program
             int q1 = 3;
             int q2 = 4;
 
-            // Multilevel Queue
-            Program MLQ = new Program();
-            calcBtn.Click += (sender, args) =>
+
+            // Queue 1 quantum buttons
+            plusQ1.Click += (sender, args) =>
             {
-                ganntChart.Text = "";
-                MLQ.Gannt = "";
-                MLQ.multiLevel(_name, _arrivaltime, _bursttime, _priority, q1, q2);
-                ganntChart.Text = MLQ.Gannt;
+                q1 += 1;
+                //sets time quantum to timeQ label
+                timeQ1.Text = q1.ToString();
+            };
+            minusQ1.Click += (sender, args) =>
+            {
+                q1 -= 1;
+                //sets time quantum to timeQ label
+                timeQ1.Text = q1.ToString();
             };
 
-            // Reset
-            resetBtn.Click += (sender, args) =>
+            // Queue 2 quantum buttons
+            plusQ2.Click += (sender, args) =>
             {
-                //q = 10;
+                q2 += 1;
                 //sets time quantum to timeQ label
-                MLQ.Gannt = "";
-                timeQ.Text = q.ToString();
-                ganntChart.Text = "";
+                timeQ2.Text = q2.ToString();
             };
-            */
+            minusQ2.Click += (sender, args) =>
+            {
+                q2 -= 1;
+                //sets time quantum to timeQ label
+                timeQ2.Text = q2.ToString();
+            };
+
+
+
+            // Multilevel Queue
+            Program MLQ = new Program();
+            calcMLQ.Click += (sender, args) =>
+            {
+                mlqGannt.Text = "";
+                mlqTAT.Text = "0";
+                mlqWT.Text = "0";
+                MLQ.Gannt = "";
+                MLQ.QTat = 0;
+                MLQ.QWait = 0;
+                MLQ.multiLevel(_name, _arrivaltime, _bursttime, _priority, q1, q2);
+                mlqGannt.Text = MLQ.Gannt;
+                mlqTAT.Text = MLQ.QTat.ToString();
+                mlqWT.Text = MLQ.QWait.ToString();
+            };
+
+
+
+            // Reset
+            resetMLQ.Click += (sender, args) =>
+            {
+                q1 = 3;
+                q2 = 4;
+                //sets time quantum to timeQ label
+                mlqTAT.Text = "0";
+                mlqWT.Text = "0";
+                MLQ.Gannt = "";
+                MLQ.QTat = 0;
+                MLQ.QWait = 0;
+                timeQ1.Text = q1.ToString();
+                timeQ2.Text = q2.ToString();
+                mlqGannt.Text = "";
+            };
+            
 
 
         }
